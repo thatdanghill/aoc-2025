@@ -22,3 +22,9 @@ If it's in [-99, 0], then we've crossed once. If [-199, -100], we've crossed twi
 To handle the positive case, we could use an if/else statement. But to keep it elegant, let's transform the output of the subtraction
 by multiplying by -1 and adding 100, then using a simple `//` floor division. We must be careful, however. 
 If the left turn starts at 0, we don't want to count that hit twice, so before making the left turn we will not count it if the state is at 0.
+
+### Golf
+
+No sacrifice in runtime was made for today's golf solution. 
+
+Conditional branching logic was condensed into variables to avoid nesting.
