@@ -27,4 +27,4 @@ If the left turn starts at 0, we don't want to count that hit twice, so before m
 
 No sacrifice in runtime was made for today's golf solution. 
 
-Conditional branching logic was condensed into variables to avoid nesting.
+Conditional branching logic was condensed into variables to avoid nesting.z

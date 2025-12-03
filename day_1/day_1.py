@@ -1,7 +1,7 @@
 from typing import List, Tuple
 
 
-FILE_NAME = 'input.txt'
+FILE_NAME = "input.txt"
 INIT_STATE = 50
 DIAL_SIZE = 100
 
@@ -24,12 +24,10 @@ def parse() -> List[Tuple[str, int]]:
     Parse the input file into a list of tuples (op, clicks)
     where op is either L or R, and clicks is the integer number of clicks to turn
     """
-    with open(FILE_NAME, 'r') as file:
+    with open(FILE_NAME, "r") as file:
         lines = file.readlines()
 
-    return [
-        (line[0], int(line[1:])) for line in lines
-    ]
+    return [(line[0], int(line[1:])) for line in lines]
 
 
 def count_zeros_silver() -> int:
@@ -38,7 +36,7 @@ def count_zeros_silver() -> int:
 
     num_zeros = 0
     for op, clicks in turns:
-        if op == 'L':
+        if op == "L":
             _, state = left_turn(state, clicks)
         else:
             _, state = right_turn(state, clicks)
@@ -55,7 +53,7 @@ def count_zeros_gold() -> int:
 
     num_zeros = 0
     for op, clicks in turns:
-        if op == 'L':
+        if op == "L":
             passes, state = left_turn(state, clicks)
         else:
             passes, state = right_turn(state, clicks)
